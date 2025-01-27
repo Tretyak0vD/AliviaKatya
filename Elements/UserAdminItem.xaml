@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Фотосалон.Elements.UserAdminItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Фотосалон.Elements"
+             mc:Ignorable="d"                        
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border x:Name="border" Opacity="1" Margin="10,5,10,5" Height="130" CornerRadius="7" Background="#49373A">
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+            </Grid.Resources>
+            <Label Content="Номер клиента: " Foreground="White" x:Name="id_clients" Margin="25,15,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="ФИО: " Foreground="White" x:Name="fio_clients" Margin="25,50,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Адрес эл. почты: " FontWeight="Bold" x:Name="email_clients" Foreground="White" Margin="25,85,100,0" FontSize="18"  HorizontalContentAlignment="Left" Height="35" VerticalAlignment="Top"/>
+            <Button x:Name="buttonDel" Style="{StaticResource BtnRedac}" Background="White" Margin="715,0,0,0" VerticalAlignment="Center" Height="40" HorizontalAlignment="Left" Width="55" Click="Click_remove">
+                <Image Source="/Images/del.png" Height="20" Width="20"/>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

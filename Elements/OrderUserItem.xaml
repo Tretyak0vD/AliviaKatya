@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Фотосалон.Elements.OrderUserItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Фотосалон.Elements"
+             mc:Ignorable="d"             
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border x:Name="border" Opacity="1" Margin="10,5,10,5" Height="290" CornerRadius="7" Background="#49373A">
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+            </Grid.Resources>
+            <Border Background="White" CornerRadius="5" Margin="-620,0,10,0" Width="150" Height="150" Grid.ColumnSpan="2">
+                <Image HorizontalAlignment="Left" Source="/Images/plus_order.png" x:Name="products_image" VerticalAlignment="Top" Width="140" Height="140" Margin="5,5,5,5"/>
+            </Border>
+            <Label Content="Номер заказа: " Foreground="White" x:Name="id_order"  Margin="195,5,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Количество копий: " Foreground="White" x:Name="numbercopies_order"  Margin="195,40,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Дата заказа: " Foreground="White" x:Name="orderdate_order"  Margin="195,75,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="ФИО сотрудника: " Foreground="White" x:Name="fioemployee_order"  Margin="195,110,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Название материала: " Foreground="White" x:Name="materialname_order"  Margin="195,145,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Название оборудования: " Foreground="White" x:Name="equipmentname_order"  Margin="195,180,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Адрес салона: " Foreground="White" x:Name="addresssalon_order"  Margin="195,215,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Общая стоимость: " Foreground="White" x:Name="fullcost_order" Margin="195,250,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Button x:Name="buttonRedac" Style="{StaticResource BtnRedac}" Background="White" Margin="715,150,0,0" VerticalAlignment="Top" Height="40" HorizontalAlignment="Left" Width="55" Click="Click_redact">
+                <Image Source="/Images/redac.png" Height="20" Width="20"/>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>

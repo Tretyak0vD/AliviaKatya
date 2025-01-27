@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Фотосалон.Elements.PaymentsUserItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Фотосалон.Elements"
+             mc:Ignorable="d"                        
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border x:Name="border" Opacity="1" Margin="10,5,10,5" Height="205" CornerRadius="7" Background="#49373A">
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+            </Grid.Resources>
+            <Label Content="Номер заказа: " Foreground="White" x:Name="idorder_payment" Margin="25,15,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Общая стоимость: " Foreground="White" x:Name="fullcost_payment" Margin="25,50,100,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" Height="35" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+            <Label Content="Дата платежа: " FontWeight="Bold" x:Name="paymentdate_payment" Foreground="White" Margin="25,85,100,0" FontSize="18"  HorizontalContentAlignment="Left" Height="35" VerticalAlignment="Top"/>
+            <Label Content="Статус оплаты: " FontWeight="Bold" x:Name="paymentstatus_payment" Foreground="White" Margin="25,120,100,0" FontSize="18"  HorizontalContentAlignment="Left" Height="35" VerticalAlignment="Top"/>
+            <Label Content="Способ оплаты: " FontWeight="Bold" x:Name="paymentmethod_payment" Foreground="White" Margin="25,155,100,0" FontSize="18"  HorizontalContentAlignment="Left" Height="35" VerticalAlignment="Top"/>
+            <ComboBox FontWeight="Bold" Foreground="White" x:Name="addresssalon_order"  Margin="174,157,326,0" Height="35" VerticalAlignment="Top" FontSize="18" BorderBrush="{x:Null}">
+                <ComboBoxItem Content="Наличный"/>
+                <ComboBoxItem Content="Безналичный"/>
+            </ComboBox>
+            <Button x:Name="buttonAdd" Style="{StaticResource BtnRedac}" Background="White" Margin="715,0,0,0" VerticalAlignment="Center" Height="40" HorizontalAlignment="Left" Width="55" Click="Click_pay">
+                <Image Source="/Images/payment.png" Height="35" Width="35"/>
+            </Button>
+        </Grid>
+    </Border>
+</UserControl>
