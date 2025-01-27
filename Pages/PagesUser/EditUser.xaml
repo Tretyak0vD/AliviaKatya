@@ -1,0 +1,52 @@
+﻿<Page x:Class="Фотосалон.Pages.PagesUser.EditUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Фотосалон.Pages.PagesUser"
+            mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditUser">
+
+    <Border CornerRadius="10,0,0,0">
+        <Border.Background>
+            <SolidColorBrush Color="#49373A" Opacity="1.0"/>
+        </Border.Background>
+        <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/Resource/BtnRes.xaml" />
+            </Grid.Resources>
+            <ScrollViewer >
+                <Border  MinHeight="530">
+                    <Grid>
+                        <Label Content="Личный кабинет" Foreground="#FFC0CB" FontWeight="Bold" Margin="39,28,26,0" FontSize="30" HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
+                        <Label Content="ФИО:" Margin="39,85,232,0" FontSize="15" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+                        <TextBox FontSize="18" Foreground="White" Style="{StaticResource BaseBox}" x:Name="fio_client" Height="35" Background="{x:Null}" Margin="39,112,26,0" VerticalAlignment="Top"/>
+                        <Grid VerticalAlignment="Top" Margin="39,149,26,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Адрес эл. почты:" Grid.Column="0" Margin="0,0,5,0" FontSize="15" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+                            <TextBox FontSize="18" Foreground="White" Style="{StaticResource BaseBox}" Grid.Column="0" Margin="0,30,10,0" x:Name="email_client" Height="35" Background="{x:Null}"  VerticalAlignment="Top"/>
+                            <Label Content="Пароль:" Grid.Column="1" Margin="0,0,5,0" FontSize="15" FontFamily="/KP_Filimonova;component/Fonts/Jost.ttf#Jost" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" Foreground="White" FontWeight="Bold"/>
+                            <TextBox FontSize="18" Foreground="White" Style="{StaticResource BaseBox}" Grid.Column="1" Margin="0,30,0,0" x:Name="password_client" Height="35" Background="{x:Null}"  VerticalAlignment="Top" />
+                        </Grid>
+                        <Grid VerticalAlignment="Top" Margin="39,216,26,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                        <Button Style="{StaticResource BtnRedac}" Background="#FFFFFF" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" HorizontalAlignment="Right" Width="105" Click="Click_User_Redact">
+                            <Image Source="/Images/redac.png" Width="20" Height="20"/>
+                        </Button>
+                        <Button x:Name="btn_cancel" Style="{StaticResource BtnRedac}" Background="#FFFFFF" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" HorizontalAlignment="Right" Width="105" Click="Click_Cancel_User_Redact">
+                            <Image Source="/Images/back.png" Width="20" Height="20"/>
+                        </Button>
+                    </Grid>
+                </Border>
+            </ScrollViewer>
+        </Grid>
+    </Border>
+</Page>

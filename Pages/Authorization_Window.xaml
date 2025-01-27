@@ -1,0 +1,29 @@
+﻿<Page x:Class="Фотосалон.Pages.Authorization_Window"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Фотосалон.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="900"
+      Title="Authorization_Window">
+
+	<Grid>
+		<Grid.Resources>
+			<ResourceDictionary Source="/Resource/BtnRes.xaml"/>
+		</Grid.Resources>
+        <Border MinWidth="350" Margin="15" Background="#49373A" CornerRadius="20" VerticalAlignment="Center" Padding="30" MaxWidth="450">
+			<StackPanel>
+                <TextBlock Text="Авторизация" Foreground="	#FFC0CB" FontSize="28" FontWeight="Bold" Margin="10,10,10,0" HorizontalAlignment="Center"/>
+                <TextBlock Text="Введите адрес электронной почты" Foreground="White" FontWeight="Bold" FontSize="15" Margin="10,10,10,0"/>
+                <TextBox FontSize="18" x:Name="email_client" Foreground="White" FontWeight="Bold" Style="{StaticResource BaseBox}" Margin="10,10,10,0" BorderBrush="	#FFC0CB" Background="{x:Null}"/>
+				<TextBlock Text="Введите пароль" FontWeight="Bold" Foreground="White" FontSize="15" Margin="10,10,10,0"/>
+                <PasswordBox FontSize="18" x:Name="password_client" Foreground="White" FontWeight="Bold" Style="{StaticResource BaseBox}" Margin="10,10,10,0" BorderBrush="#FFC0CB" Background="{x:Null}"/>
+                <Button Background="#FFC0CB" FontWeight="Bold" Foreground="White" Click="Log_in" Style="{StaticResource BaseBtn}" Content="Авторизация" Width="250" Height="40" HorizontalAlignment="Center" Margin="10,20,10,0"/>
+				<TextBlock FontSize="15" Margin="10,10,10,0" Width="140" HorizontalAlignment="Left">
+                    <Hyperlink FontSize="15" FontWeight="Bold" Foreground="#FFC0CB" Click="Back">Регистрация</Hyperlink>
+				</TextBlock>
+			</StackPanel>
+		</Border>
+	</Grid>
+</Page>
